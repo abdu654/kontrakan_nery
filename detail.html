@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrakan Queennery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha384-ydFGeLMAEAqbBU/d2B/rxrav+k6oAs2YTfi1P7aa0ih1I/ObrJGl/Zz6P83LjD7/W" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            max-width: 1600px; /* Perbesar lebar section */
+            margin: 20px auto; /* Atur margin auto untuk memusatkan section */
+            padding: 2em; /* Perbesar padding untuk memberikan ruang yang lebih baik */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            max-width: 70%; /* Menyesuaikan dengan lebar gambar yang diinginkan */
+            height: auto;
+            border-radius: 8px;
+            margin-right: 10px; /* Mengurangi jarak antara gambar 1 dan gambar 2 */
+            cursor: pointer;
+        }
+
+        .text-description {
+            flex-grow: 1; 
+            align-self: flex-start;
+        }
+
+        .contact-info {
+            margin-top: 1em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>Jika Langsung Bayar 6 bulan / Setahun kami akan memberikan diskon kepada Anda!</header>
+    <section>
+        <a href="img/kt1.jpeg" data-lightbox="gallery" data-title="Deskripsi Gambar 1">
+            <img src="img/kt1.jpeg" alt="Deskripsi Gambar 1">
+        </a>
+
+        <a href="img/kt2.jpeg" data-lightbox="gallery" data-title="Deskripsi Gambar 2">
+            <img src="img/kt2.jpeg" alt="Deskripsi Gambar 2">
+        </a>
+
+        <div class="text-description">
+            <p>
+                Kami menyediakan kontrakan dekat Jalan RTM Spesifikasi sebagai berikut :
+                <ul>
+                    <li>1 Kamar</li>
+                    <li>1 Ruang tamu</li>
+                    <li>Dapur</li>
+                    <li>Kamar mandi (toilet duduk dan shower)</li>
+                </ul>
+                
+                Dengan <Strong>benefit</Strong> sebagai berikut :
+                <ul>
+                    <li>Dekat jalan besar lokasi strategis</li>
+                    <li>Dekat mesjid</li>
+                    <li>Dekat Alfamart/indomaret</li>
+                    <li>Masuk mobil</li>
+                    <li>Dekat warteg</li>
+                    <li>Listrik token perpintu</li>
+                    <li>Pompa listrik sendiri sendiri</li>
+                    <li>Toren sendiri sendiri</li>
+                    <li>Lokasi tenang</li>
+                    <li>Ada pagarnya (bisa masuk motor).</li>
+                </ul>
+            </p>
+            <div class="contact-info">
+                <p><strong>Alamat:</strong> Jl. Rtm, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat 16451</p>
+                <p>
+                    <strong>WhatsApp Pemilik:</strong>
+                    <a href="https://wa.me/6281510478178" target="_blank">
+                        <i class="fab fa-whatsapp"></i> +62 815-1047-8178
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-/1I7k46Sd9vBp2r8LvljUooROUBfA+QNVdBsqQtwrKRLLoKYEjzpmhS1MlKLY6ck" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha384-T9A5qjy3ZkMw/2U03sg+bdmRz5aaqE7YY5p8n8U+qlTjBsm3+3oEf+JCSvPDh2U5q" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            // Inisialisasi Lightbox
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true
+            });
+        });
+    </script>
+</body>
+</html>
