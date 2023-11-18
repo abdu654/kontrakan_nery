@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrakan Queennery</title>
+    <!-- Hanya gunakan salah satu, CDN atau lokal -->
+    <!-- CDN -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha384-ydFGeLMAEAqbBU/d2B/rxrav+k6oAs2YTfi1P7aa0ih1I/ObrJGl/Zz6P83LjD7/W" crossorigin="anonymous"> -->
+    
+    <!-- Lokal -->
+    <link rel="stylesheet" href="path/to/lightbox.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            max-width: 1600px;
+            margin: 20px auto;
+            padding: 2em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            max-width: 70%;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .text-description {
+            flex-grow: 1; 
+            text-align: justify;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .button-container {
+            margin-top: 10px;
+        }
+
+        .button-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .button-container button:hover {
+            background-color: #45a049;
+        }
+
+        .contact-info {
+            margin-top: 1em;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .image-container {
+                flex-direction: column;
+            }
+
+            img {
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            margin: 5% auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .lightbox {
+    display: none;
+}
+
+.lb-image {
+    max-width: none;
+    width: auto;
+    height: auto;
+}
+
+    </style>
+</head>
+<body>
+    <header>Jika Langsung Bayar 6 bulan / Setahun kami akan memberikan diskon kepada Anda!</header>
+    <section>
+        <div class="text-description">
+            <p>
+                Kami menyediakan kontrakan dekat Jalan RTM Spesifikasi sebagai berikut :
+                <ul>
+                    <li>1 Kamar</li>
+                    <li>1 Ruang tamu</li>
+                    <li>Dapur</li>
+                    <li>Kamar mandi (toilet duduk dan shower)</li>
+                </ul>
+                
+                Dengan <strong>benefit</strong> sebagai berikut :
+                <ul>
+                    <li>Dekat jalan besar lokasi strategis</li>
+                    <li>Dekat mesjid</li>
+                    <li>Dekat Alfamart/indomaret</li>
+                    <li>Masuk mobil</li>
+                    <li>Dekat warteg</li>
+                    <li>Listrik token perpintu</li>
+                    <li>Pompa listrik sendiri sendiri</li>
+                    <li>Toren sendiri sendiri</li>
+                    <li>Lokasi tenang</li>
+                    <li>Ada pagarnya (bisa masuk motor).</li>
+                </ul>
+            </p>
+            <div class="contact-info">
+                <p><strong>Alamat:</strong> Jl. Rtm, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat 16451</p>
+                <p>
+                    <strong>WhatsApp Pemilik:</strong>
+                    <a href="https://wa.me/6281510478178" target="_blank">
+                        <i class="fab fa-whatsapp"></i> +62 815-1047-8178
+                    </a>
+                </p>
+            </div>
+            <div class="button-container">
+                <button onclick="openModal('img/kt1.jpeg')">Lihat Photo Dalam Rumah</button>
+            </div>
+            <div class="button-container">
+                <button onclick="openModal('img/kt2.jpeg')">Lihat Photo Rumah Rumah 2</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <!-- Konten footer -->
+    </footer>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-/1I7k46Sd9vBp2r8LvljUooROUBfA+QNVdBsqQtwrKRLLoKYEjzpmhS1MlKLY6ck" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha384-T9A5qjy3ZkMw/2U03sg+bdmRz5aaqE7YY5p8n8U+qlTjBsm3+3oEf+JCSvPDh2U5q" crossorigin="anonymous"></script>
+    <script src="path/to/lightbox.min.js"></script>
+  <script>
+       $(document).ready(function(){
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'alwaysShowNavOnTouchDevices': true
+                // ... tambahkan opsi lain sesuai kebutuhan
+            });
+        });
+
+        function openModal(imgPath) {
+            var modal = document.getElementById('myModal');
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = imgPath;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
